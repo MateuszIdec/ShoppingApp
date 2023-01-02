@@ -7,7 +7,7 @@
     tools:context=".FirstFragment">
 
         <ImageButton
-            android:id="@+id/simpleImageButton"
+            android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_button_background"
@@ -20,45 +20,41 @@
             app:layout_constraintVertical_bias="0.939"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <LinearLayout
+        <GridLayout
+            android:id ="@+id/shoppingListing"
             android:layout_width="409dp"
             android:layout_height="591dp"
+            android:columnCount="2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.728">
 
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/list_icon"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/male"
+                    android:layout_row="0"
+                    android:layout_column="0"
                     android:layout_marginStart="20dp"
+                    android:src="@drawable/male"
                     app:civ_border_color="#FF000000"
                     app:civ_border_width="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.728">
-
-        </LinearLayout>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/shopping_list_description"
-                    android:textSize="20sp"
+                    android:layout_row="0"
+                    android:layout_column="1"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:text="@string/shopping_list_description"
+                    android:textSize="20sp" />
 
-                </TextView>
 
-        </LinearLayout>
+        </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

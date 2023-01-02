@@ -1,6 +1,9 @@
 package com.example.mobilesystemstask2
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.mobilesystemstask2.databinding.ActivityMainBinding
@@ -13,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {

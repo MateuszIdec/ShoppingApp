@@ -46,11 +46,18 @@ class SecondFragment : Fragment() {
     private fun setLineChartData() {
 
         val lineDataSet = LineDataSet(exampleData(), "First shop")
+        val lineDataSet1 = LineDataSet(exampleData(), "Second shop")
         lineDataSet.color = Color.GRAY
+        lineDataSet1.color = Color.GREEN
         val data = LineData(lineDataSet)
+        val data1 = LineData(lineDataSet1)
         lineDataSet.circleRadius = 4f
         lineDataSet.setCircleColor(Color.BLACK)
         lineDataSet.lineWidth = 2f
+
+        lineDataSet1.circleRadius = 4f
+        lineDataSet1.setCircleColor(Color.BLACK)
+        lineDataSet1.lineWidth = 2f
 
         val xAxis = chart!!.xAxis
         xAxis.position = XAxis.XAxisPosition.BOTTOM
@@ -73,6 +80,14 @@ class SecondFragment : Fragment() {
         dataValues.add(Entry(0f,2.2f))
         dataValues.add(Entry(1f,2.6f))
         dataValues.add(Entry(2f,2.3f))
+        return dataValues
+    }
+
+    private fun exampleData1() : ArrayList<Entry> {
+        val dataValues = ArrayList<Entry>()
+        dataValues.add(Entry(0.2f,2.4f))
+        dataValues.add(Entry(1f,2.3f))
+        dataValues.add(Entry(2f,2.5f))
         return dataValues
     }
 
